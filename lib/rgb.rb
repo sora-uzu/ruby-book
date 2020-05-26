@@ -15,3 +15,5 @@ end
 def to_ints(hex)
   r,g,b = hex.scan(/\w\w/).map(&:hex)
 end
+
+puts r

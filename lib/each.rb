@@ -33,19 +33,30 @@
 # puts liquid?(99)
 # puts liquid?(100)
 
-def charge(age)
-  case age
-  when 0..5
-    0
-  when 6..12
-    300
-  when 13..18
-    600
-  else
-    1000
-  end
+# def charge(age)
+#   case age
+#   when 0..5
+#     0
+#   when 6..12
+#     300
+#   when 13..18
+#     600
+#   else
+#     1000
+#   end
+# end
+# puts charge(3)
+# puts charge(12)
+# puts charge(16)
+# puts charge(25)
+
+dimensions = [
+  [10,20],
+  [30,40],
+  [50,60],
+]
+areas = []
+dimensions.each_with_index do |(length, width),i|
+ puts "length:#{length}, width:#{width}, i:#{i}"
 end
-puts charge(3)
-puts charge(12)
-puts charge(16)
-puts charge(25)
+puts areas
