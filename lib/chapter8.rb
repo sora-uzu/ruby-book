@@ -202,25 +202,39 @@
 #   p AwqsomeApi.base_url
 #   p AwqsomeApi.debug_mode
 
-module StringShuffle
-  refine String do
-    def shuffle
-      chars.shuffle.join
-    end
+# module StringShuffle
+#   refine String do
+#     def shuffle
+#       chars.shuffle.join
+#     end
+#   end
+# end
+
+# class User
+#   using StringShuffle
+
+#   def initialize(name)
+#     @name = name
+#   end
+
+#   def shuffled_name
+#     @name.shuffle
+#   end
+# end
+
+# user = User.new('Alice')
+# p user.shuffled_name
+
+puts 'Start.'
+module Greeter
+  def hello
+    'hello'
   end
 end
 
-class User
-  using StringShuffle
-
-  def initialize(name)
-    @name = name
-  end
-
-  def shuffled_name
-    @name.shuffle
-  end
+begin
+greeter = Greeter.new
+rescue
+  puts '例外が発生したが、このまま実行する'
 end
-
-user = User.new('Alice')
-p user.shuffled_name
+puts 'End.'
